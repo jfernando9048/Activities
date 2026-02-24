@@ -3,20 +3,16 @@
 #include "Enemy.h"
 
 int main() {
-    //Semilla para que los números cambien cada vez
     srand(static_cast<unsigned int>(time(NULL)));
-
-    //Constante y array de 15 punteros
-    const int MAX_DYNOSAURS = 15;
+    //Define el tamaño máximo y crea el array de 15 punteros
+    const short MAX_DYNOSAURS = 15;
     Dynosaur* jurassicPark[MAX_DYNOSAURS];
-
-    //Inicialización de las arrays
-    for (int i = 0; i < MAX_DYNOSAURS; i++) {
-        if (i % 2 == 0) { // Solo en las posiciones que son pares
+    //Recorre el array para llenarlo
+    for (short i = 0; i < MAX_DYNOSAURS; i++) {
+        if (i % 2 == 0) {
             bool valid = false;
-            while (!valid) {
+            while (!valid) {// Comprueba que no tenga la misma fuerza que el dinosaurio de i-2
                 Dynosaur temp = createRandomDynosaur();
-                // Comparar con el dinosaurio de i-2
                 if (i >= 2 && jurassicPark[i - 2] != nullptr) {
                     if (!compareDynosaurStrength(temp, *jurassicPark[i - 2])) {
                         jurassicPark[i] = new Dynosaur(temp);
@@ -30,12 +26,12 @@ int main() {
             }
         }
         else {
-            jurassicPark[i] = nullptr; // Las posiciones impares vacías
+            jurassicPark[i] = nullptr;
         }
     }
 
-    // Imprimir resultados 
-    for (int i = 0; i < MAX_DYNOSAURS; i++) {
+    //Imprime la lista completa por pantalla
+    for (short i = 0; i < MAX_DYNOSAURS; i++) {
         std::cout << "Posicion " << i << ": ";
         if (jurassicPark[i] != nullptr) {
             std::cout << jurassicPark[i]->name << " (Fuerza: "
@@ -45,9 +41,8 @@ int main() {
             std::cout << "No hay Dinosaurio" << std::endl;
         }
     }
-
-    // Limpieza de memoria (por lo de las "Best Practice")
-    for (int i = 0; i < MAX_DYNOSAURS; i++) {
+    //Borra los dinosaurios creados para liberar memoria(parte de las "BEST PRACTICES")
+    for (short i = 0; i < MAX_DYNOSAURS; i++) {
         delete jurassicPark[i];
     }
 

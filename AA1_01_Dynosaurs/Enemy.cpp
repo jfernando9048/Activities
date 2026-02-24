@@ -1,7 +1,6 @@
 #include "Enemy.h"
-#include <cstdlib> // Para rand()
-
-// Devuelve el nombre del tipo como strings
+#include <cstdlib>
+//Convierte el tipo de dinosaurio a un texto para imprimirlo
 std::string getDynosaurTypeToString(DynosaurType type) {
     switch (type) {
     case DynosaurType::TYRANNOSAURUS: return "TYRANNOSAURUS";
@@ -12,33 +11,33 @@ std::string getDynosaurTypeToString(DynosaurType type) {
     }
 }
 
-//La fuerza es la suma de salud + ataque
 bool compareDynosaurStrength(Dynosaur d1, Dynosaur d2) {
+    // La fuerza es la suma vida + ataque
     return (d1.health + d1.attackPower) == (d2.health + d2.attackPower);
 }
-
-//Creación aleatoria
+//Crea un dinosaurio con datos aleatorios según su tipo
 Dynosaur createRandomDynosaur() {
     Dynosaur d;
-    int randomNum = rand() % 4;
+    
+    int randomNum = rand() % NUM_DINO_TYPES;
     d.type = static_cast<DynosaurType>(randomNum);
 
-    // Asignación según el tipo
+    //Asigna nombre y ataque específico según el tipo elegido
     if (d.type == DynosaurType::TYRANNOSAURUS) {
         d.name = "TYRANNOSAURUS";
-        d.attackPower = 100;
+        d.attackPower = ATK_TYRANNOSAURUS;
     }
     else if (d.type == DynosaurType::VELOCIRAPTOR) {
         d.name = "VELOCIRAPTOR";
-        d.attackPower = 80;
+        d.attackPower = ATK_VELOCIRAPTOR;
     }
     else if (d.type == DynosaurType::BRACHIOSAURUS) {
         d.name = "BRACHIOSAURUS";
-        d.attackPower = 65;
+        d.attackPower = ATK_BRACHIOSAURUS;
     }
     else if (d.type == DynosaurType::DIPLODOCUS) {
         d.name = "DIPLODOCUS";
-        d.attackPower = 45;
+        d.attackPower = ATK_DIPLODOCUS;
     }
     return d;
 }
