@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AA1_01_Dynosaurs", "AA1_01_
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AA1_04_CardGame", "AA1_04_CardGame\AA1_04_CardGame.vcxproj", "{ED379081-353B-47DA-80C2-98B00D150836}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AA1_03_ShootBall", "AA1_03_ShootBall\AA1_03_ShootBall.vcxproj", "{2EDCF90C-56BC-43D6-8E1D-169187CC47B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{ED379081-353B-47DA-80C2-98B00D150836}.Release|x64.Build.0 = Release|x64
 		{ED379081-353B-47DA-80C2-98B00D150836}.Release|x86.ActiveCfg = Release|Win32
 		{ED379081-353B-47DA-80C2-98B00D150836}.Release|x86.Build.0 = Release|Win32
+		{2EDCF90C-56BC-43D6-8E1D-169187CC47B0}.Debug|x64.ActiveCfg = Debug|x64
+		{2EDCF90C-56BC-43D6-8E1D-169187CC47B0}.Debug|x64.Build.0 = Debug|x64
+		{2EDCF90C-56BC-43D6-8E1D-169187CC47B0}.Debug|x86.ActiveCfg = Debug|Win32
+		{2EDCF90C-56BC-43D6-8E1D-169187CC47B0}.Debug|x86.Build.0 = Debug|Win32
+		{2EDCF90C-56BC-43D6-8E1D-169187CC47B0}.Release|x64.ActiveCfg = Release|x64
+		{2EDCF90C-56BC-43D6-8E1D-169187CC47B0}.Release|x64.Build.0 = Release|x64
+		{2EDCF90C-56BC-43D6-8E1D-169187CC47B0}.Release|x86.ActiveCfg = Release|Win32
+		{2EDCF90C-56BC-43D6-8E1D-169187CC47B0}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
