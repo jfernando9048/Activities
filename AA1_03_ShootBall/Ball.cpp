@@ -8,7 +8,7 @@ Ball getRandomBall() {
 }
 
 void printBall(const Ball& b) {
-    char c;
+    char c = ' ';
     switch (b.color) {
     case Color::RED: c = 'R'; break;
     case Color::GREEN: c = 'G'; break;

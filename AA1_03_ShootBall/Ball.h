@@ -1,4 +1,4 @@
-#define BALL_H
+#ifndef BALL_H
 #define BALL_H
 
 //Balls can be of 5 different colors
@@ -12,3 +12,4 @@ struct Ball {
 //Auxiliary functions
 Ball getRandomBall();
 void printBall(const Ball& b);
+#endif
