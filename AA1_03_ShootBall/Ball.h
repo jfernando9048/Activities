@@ -1,5 +1,4 @@
-#ifndef BALL_H
-#define BALL_H
+#pragma once
 
 //Balls can be of 5 different colors
 enum class Color { RED, GREEN, BLUE, YELLOW, PURPLE };
@@ -12,4 +11,3 @@ struct Ball {
 //Auxiliary functions
 Ball getRandomBall();
 void printBall(const Ball& b);
-#endif

@@ -1,5 +1,4 @@
-#define PANEL_H
-#define PANEL_H
+#pragma once
 
 #include "Ball.h"
 

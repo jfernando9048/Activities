@@ -7,7 +7,7 @@
  
 //Implement a main with the game loop
 int main() {
-    srand((unsigned int)time(nullptr)); //Random seed initialization
+    srand(static_cast<unsigned int>(time(nullptr))); //Random seed initialization
 
     std::cout << "--- Welcome to Zumita ---\n";
 

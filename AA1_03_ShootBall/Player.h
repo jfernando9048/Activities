@@ -1,18 +1,17 @@
-#ifndef PLAYER_H
-#define PLAYER_H
+#pragma once
 
 #include <string>
 #include "Ball.h"
 
 //Implement the Player struct
 struct Player {
-    std::string name;
-    int position;
-    int score;
+    std::string name="";
+    int position =0;
+    int score=0;
 
     //Gun representation (ball magazine) using dynamic memory
-    Ball* gun;
-    int gunSize;
+    Ball* gun=nullptr;
+    int gunSize=0;
 
     //Required methods
     void init(std::string name, int position);
@@ -21,5 +20,3 @@ struct Player {
     //Destructor to prevent memory leaks
     ~Player();
 };
-
-#endif
